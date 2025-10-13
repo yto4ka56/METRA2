@@ -59,10 +59,10 @@ namespace Lab2
                     "Абсолютная сложность: " + calculator.GetAbsoluteComplexity();
                 
                 lblRelativeComplexity.Text = 
-                    "Относительная сложность: " + calculator.GetRelativeComplexity();
+                    $"Относительная сложность: {calculator.GetRelativeComplexity():F2}";
                 
                 lblMaxDepth.Text = 
-                    "Максимальная вложенность: " + calculator.GetMaxDepth();
+                    "Максимальный уровень вложенности: " + calculator.GetMaxDepth();
             }
             catch (Exception ex)
             {
