@@ -15,8 +15,6 @@ for number in numbers {
     }
 }
 
-var index = 0
-
 var counter = 0
 while counter < 6 {
     if counter < numbers.count {
