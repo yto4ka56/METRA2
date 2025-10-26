@@ -16,15 +16,6 @@ for number in numbers {
 }
 
 var index = 0
-repeat {
-    let currentNumber = numbers[index]
-    
-    if currentNumber < 0 {
-            print("Небольшое отрицательное: \(currentNumber)")
-    }
-    
-    index += 1
-} while(index < numbers.count)
 
 var counter = 0
 while counter < 6 {
