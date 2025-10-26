@@ -1,83 +1,50 @@
 ﻿import Foundation
 
+let numbers = [15, 3, 8, 0, 42, 7, 25, 18, 2, 9]
+var result = ""
+var processedNumbers: [Int] = []
 
-   /* func calculateScore(data: [Int]) -> Int {
-        var score = 0
-        
-        if data.isEmpty {
-            return 0
-        }
-        
-        for value in data { 
-            
-  
-            if value > 10 {
-                score += 10
-            } else {
-                score += value
-            }
-            
-            var temp = value
-            while temp > 0 {
-                temp -= 1
-                
-                
-                if temp % 3 == 0 { 
-                    
-                    
-                    repeat {
-                        print("Iterating...")
-                    } while temp < 0
-                    
-                } else if temp % 2 == 0 { 
-                    
-                    continue
-                } else {
-                    break
-                }
-            } 
-        } 
-        
+for number in numbers {
+    if number > 0 {
       
-        switch score { 
-            case 0: 
-                print("Zero score")
-            case 1...10: 
-                print("Low score")
-            default: 
-                print("High score")
+        if number % 2 == 0 {
+            result += "четное\n"
+        } else {
+            result += "нечетное\n"
         }
-        
-        return score
-
-    func anotherFunction() {
-        // ...
     }
-}*/
+}
 
-    if value > 10 {
-                score += 10
-            } else {
-                score += value
+var index = 0
+repeat {
+    let currentNumber = numbers[index]
+    
+    if currentNumber < 0 {
+            print("Небольшое отрицательное: \(currentNumber)")
+    }
+    
+    index += 1
+} while(index < numbers.count)
+
+var counter = 0
+while counter < 6 {
+    if counter < numbers.count {
+ 
+        if numbers[counter] == 0 {
+            print("Найден ноль на позиции \(counter)")
             
-            
-            var temp = value
-            while temp > 0 {
-                temp -= 1
-                
-                
-                if temp % 3 == 0 { 
-                    
-                    
-                    switch score { 
-                                case 0: 
-                                    print("Zero score")
-                                case 1...10: 
-                                    print("Low score")
-                                default: 
-                                    print("High score")
-                            }
-                    
-                } 
-            } 
+    
+            switch counter {
+            case 0:
+                print("Ноль в начале массива")
+            case numbers.count-1:
+                print("Ноль в конце массива")
+            default:
+                print("Ноль в середине массива")
             }
+        }
+    }
+    counter += 1
+}
+
+print(result)

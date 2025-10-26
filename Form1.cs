@@ -63,6 +63,9 @@ namespace Lab2
                 
                 lblMaxDepth.Text = 
                     "Максимальный уровень вложенности: " + calculator.GetMaxDepth();
+
+                lblOperatorCount.Text =
+                    "Количество операторов: " + calculator.GetOperatorCount();
             }
             catch (Exception ex)
             {
