@@ -30,7 +30,9 @@ public class GilbMetricCalculator
         "if",      
         "for", 
         "while",     
-        "repeat",    
+        "repeat",   
+        "else"
+        
     };
     
     
@@ -218,10 +220,10 @@ public class GilbMetricCalculator
                         }
                     }
                     
-                    if (!keywordFound && (currentSub.StartsWith("else ") || currentSub.StartsWith("else if ")))
+                    if ((currentSub.StartsWith("else ") || currentSub.StartsWith("else if ")))
                     {
                         index += currentSub.StartsWith("else ") ? 4 : 8; 
-                        keywordFound = true;
+                        //keywordFound = true;
                     }
 
                     if (!keywordFound && insideSwitch && currentSub.StartsWith("case "))
