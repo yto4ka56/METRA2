@@ -2,7 +2,6 @@
 
 let numbers = [15, 3, 8, 0, 42, 7, 25, 18, 2, 9]
 var result = ""
-var processedNumbers: [Int] = []
 
 for number in numbers {
     if number > 0 {
